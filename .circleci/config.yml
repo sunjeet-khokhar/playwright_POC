@@ -46,4 +46,5 @@ jobs:
       - run: pwd
       - run: ls
       - run: npm i -D playwright
+      - run: sudo apt-get install ffmpeg
       - run: node playwright.js
