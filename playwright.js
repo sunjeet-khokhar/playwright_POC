@@ -7,7 +7,8 @@ const { assert } = require('console');
 
 (async  () => {
   // launch a chrome instance from the path provided , not in headless mode and with the slowMo value set for slower playback
-  const browser = await chromium.launch({headless: false,executablePath: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',slowMo: 500});
+  //const browser = await chromium.launch({headless: false,executablePath: '/Applications/Google Chrome Canary.app/Contents/MacOS/Google Chrome Canary',slowMo: 500});
+  const browser = await chromium.launch();
   // playwright has the concept of giving context to your browser object --> https://playwright.dev/#version=v1.4.0&path=docs%2Fcore-concepts.md&q=browser-contexts
   const context = await browser.newContext();
   // from a context spawn your page object, the primary medium to perform broswer automation
