@@ -43,4 +43,5 @@ jobs:
           #key: v1-dependencies-{{ checksum "package.json" }}
 
       # run tests!
-      - run: node playright.js
+      - run: pwd
+      - run: ls
