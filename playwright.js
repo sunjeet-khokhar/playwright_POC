@@ -13,30 +13,8 @@ const { assert } = require('console');
   const context = await browser.newContext();
   // from a context spawn your page object, the primary medium to perform broswer automation
   const page = await context.newPage();
-  // lets head over to the home page of out website 
-  await page.goto('https://theiconic.com.au')
-  // oh,dealing with a pesky pop up is easy peasey,did not have to write waits etc,just had to enter text of the button to be used as a selector !
-  //playwright's inbuilt auto-wait capability -- https://playwright.dev/#version=v1.4.0&path=docs%2Factionability.md&q=
-  await page.click('text=No Thanks')
-  // perform navigation to another page of the app using text as a selector.
-  // More on selectors here - https://playwright.dev/#version=v1.4.0&path=docs%2Fselectors.md&q=
-  await page.click('text=#stayhome')
-  // head over to the login page
-  await page.goto('https://www.theiconic.com.au/customer/account/login/')
-  // select an element by id and click on it
-  await page.click('id=LoginForm_email')
-  // or just directly filling it with text
-  await page.fill('id=LoginForm_email','zookeeper@nationalzoo.com')
-  // another element found easily by id and text entered
-  await page.fill('id=LoginForm_password','tununutunu')
-  // find by id and click the login button
-  await page.click('id=LoginForm_submit')
-  // lets find the text contents of the selector below , just have pass the selector to the page.textContent method 
-  const login_error = await page.textContent('#form-account-login > div:nth-child(2) > div:nth-child(2) > div');
-  console.log(login_error)
-  // perform a simple assertion
-  assert(login_error=='The email address or password you entered is incorrect. Please try again.1')
-  // we are done :) 
+  await page.goto('http://whatsmyuseragent.org/');
+  await page.screenshot({ path: `example.png` });
   await browser.close();
 })();
 
