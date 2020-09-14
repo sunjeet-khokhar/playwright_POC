@@ -45,8 +45,5 @@ jobs:
       # run tests!
       - run: pwd
       - run: ls
-      - run: cd repo
-      - run: pwd
-      - run: ls
       - run: npm i -D playwright
       - run: node playwright.js
