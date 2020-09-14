@@ -35,7 +35,7 @@ jobs:
             # fallback to using the latest cache if no exact match is found
             - v1-dependencies-
 
-      - run: npm i -D playwright
+      
 
       #- save_cache:
           #paths:
@@ -45,4 +45,8 @@ jobs:
       # run tests!
       - run: pwd
       - run: ls
+      - run: cd repo
+      - run: pwd
+      - run: ls
+      - run: npm i -D playwright
       - run: node playwright.js
