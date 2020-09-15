@@ -39,5 +39,5 @@ jobs:
       # run tests!
       - run: pwd
       - run: ls
-      - run: npm ci
+      - run: npm install
       - run: node playwright.js
