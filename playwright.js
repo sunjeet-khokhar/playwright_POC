@@ -15,6 +15,7 @@ const { assert } = require('console');
   const page = await context.newPage();
   await page.goto('http://whatsmyuseragent.org/');
   await page.screenshot({ path: `example.png` });
+  console.log(page.title());
   await browser.close();
 })();
 
